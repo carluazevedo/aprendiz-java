@@ -1,11 +1,24 @@
 public class Conta {
 
 	int numero;
-	double saldo, limite;
+	private double saldo, limite;
 	Cliente titular = new Cliente();
 
-	boolean saca(double valor) {
-		if (this.saldo < valor) {
+	// Constructor
+	Conta() {
+		System.out.println("*** Conta criada com sucesso ***");
+	}
+
+	public void setLimite(double valor) {
+		this.limite = valor;
+	}
+
+	public double getSaldo() {
+		return this.saldo + this.limite;
+	}
+
+	public boolean saca(double valor) {
+		if (valor > this.getSaldo()) {
 			return false;
 		} else {
 			this.saldo = this.saldo - valor;
@@ -13,7 +26,7 @@ public class Conta {
 		}
 	}
 
-	void deposita(double valor) {
+	public void deposita(double valor) {
 		this.saldo += valor;
 	}
 }
