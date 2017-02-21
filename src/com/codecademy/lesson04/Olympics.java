@@ -2,7 +2,7 @@ package com.codecademy.lesson04;
 
 import java.util.*;
 
-public class Example1 {
+public class Olympics {
 
 	public static void main(String[] args) {
 		//Some Olympic sports
