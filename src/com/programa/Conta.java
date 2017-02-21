@@ -1,3 +1,5 @@
+package com.programa;
+
 public class Conta {
 
 	int numero;
